@@ -1,0 +1,20 @@
+.box__repos {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.box__repos--repo {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(211, 211, 211, 0.35);
+    border-radius: 1%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.box__repos--repo h2 {
+    font-size: 20px;
+}

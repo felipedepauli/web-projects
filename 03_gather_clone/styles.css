@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.office-canvas {
+    width: 351;
+    height: 198;
+}
+
+.office-container {
+    background-color: orange;
+    position: relative;
+    width: 352px;
+    height: 198px;
+    outline: 1px solid #fff;
+    margin: 0 auto;
+
+    transform: scale(2) translateY(50%);
+}
+
+.office-container canvas {
+    image-rendering: pixelated;
+}
+
+body>h1 {
+    color: white;
+}
+

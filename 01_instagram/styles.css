@@ -1,0 +1,179 @@
+/*  Desfazendo configurações padrão importantes do navegador. */
+* {
+    padding             : 0;
+    margin              : 0;
+    box-sizing          : border-box;
+    text-decoration     : none;
+    font-family         : sans-serif;
+    font-size           : 14px;
+}
+
+/*  O body será o painel de fundo. */
+body {
+    width               : 100%;
+    min-height          : 100vh;
+    background-color    : rgb(243, 243, 243);
+    margin              : 0;
+    padding             : 0;
+    display             : flex;
+    justify-content     : center;
+}
+
+/*  Container principal, contendo as colunas smartphone e de interações. */
+.instagram-wrapper {
+    display             : flex;
+    align-items         : center;
+    justify-content     : start;
+    width               : 60%;
+    height              : 100vh;
+}
+
+/*  Coluna que terá a imagem do smartphone. */
+.instagram-phone {
+    display             : flex;
+    align-items         : center;
+    justify-content     : center;
+    width               : 50%;
+}
+
+/*  Imagem do smartphone. */
+.instagram-phone img {
+    height              : 50rem;
+}
+
+/*  Coluna que terá as interações. */
+.instagram-continue {
+    display             : flex;
+    align-items         : center; /* horizontal */
+    justify-content     : space-around; /* vertical */
+    flex-direction      : column;
+    width               : 50%;
+    min-height          : 34rem;
+}
+
+/*  A coluna de interações terá dois grupos (aqueles com fundo branco). */
+/*  O primeiro terá o Login, e o segundo terá os controles para Alternar/Cadastrar contas. */
+.group {
+    display             : flex;
+    justify-content     : space-between;
+    align-items         : center;
+    flex-direction      : column;
+    background-color    : #ffffff;
+    width               : 100%;
+    padding             : 1.3rem 0;
+    border              : 1px solid lightgray;
+}
+
+/*  Grupo de login. */
+.group:nth-child(1) {
+    min-height          : 20rem;
+}
+
+/*  Dentro do grupo de login, box para imagem da logo. */
+.group:nth-child(1) .instagram-logo {
+    height              : 3rem;
+}
+
+/*  Dentro do grupo de login, box para imagem da foto de perfil. */
+.group:nth-child(1) .profile-photo {
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
+    border-radius       : 50%;
+    overflow            : hidden;
+}
+
+/*  Dentro do grupo de login, dentro do box de imagem de foto de perfil, imagem de foto de perfil. */
+.profile-photo img {
+    height              : 6rem;
+}
+
+/*  Botão para logar. */
+.instagram-login {
+    background-color    : #0095f6;
+    color               : #ffffff;
+    padding             : 8px;
+    border-radius       : 4px;
+}
+
+/*  Botão para remover a conta da tela de login. */
+.instagram-logout {
+    color               : #0095f6;
+    margin-top          : 1rem;
+}
+/*  Box para quando Alternar contra ou criar uma nova. */
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+/*  Classe para facilitar aplicação da cor azul padrão. */
+.link-blue {
+    color: #0095f6;
+}
+
+/*  Box para controle de instalações de apps.*/
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+/*  Box para botões para páginas na Appstore e Google Play. */
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+/*  Botões com links. */
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+/*  Atribuição de imagem Apple Store ao 1o botão. */
+.app-download:nth-child(1) {
+    background-image: url('./img/gioApple.png');
+}
+/*  Atribuição de imagem Google Play ao 2o botão. */
+.app-download:nth-child(2) {
+    background-image: url('./img/gioPlay.png');
+}
+
+/* media queries */
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 700px) {
+    body {
+        background-color: #ffffff;
+    }
+    .instagram-wrapper {
+        width: 90%;
+    }
+    .instagram-phone {
+        display: none;
+    }
+    .instagram-continue {
+        width: 100%;
+    }
+    .group {
+        border: 1px solid transparent;
+    }
+}
+@media (max-width: 350px) {
+    .download {
+        flex-direction: column;
+    }
+    .app-download {
+        margin: 0.2rem;
+    }
+}
